@@ -47,16 +47,12 @@ class VideoList extends Component {
 							marginTop: '20px',
 							cursor: 'pointer',
 							display: 'flex',
-							borderRadius: '10px'
+							borderRadius: '2px',
+							border: '1px solid #c4bcbc'
 						}}
 					>
-						<img
-							id="video-image"
-							className="img-thumbnail"
-							src={video.snippet.thumbnails.default.url}
-							style={{ marginTop: '10px', marginBottom: '10px' }}
-						/>
-						<h6 className="display-6" style={{ marginTop: '10px', marginLeft: '5px' }}>
+						<img src={video.snippet.thumbnails.default.url} style={{ marginTop: '10px' }} />
+						<h6 className="display-6 title" style={{ marginTop: '10px', marginLeft: '5px' }}>
 							{video.snippet.title}
 						</h6>
 					</div>
@@ -73,18 +69,20 @@ class VideoList extends Component {
 		return (
 			<React.Fragment>
 				<Header />
-				<form className="form-group pt-5" onSubmit={handleSubmit(this.onSubmit)}>
-					<Field name="searchTerm" component={this.renderSearchBar} />
-					<button
-						className="btn btn-primary"
-						id="submit-button"
-						style={{ marginLeft: '45%', marginTop: '10px' }}
-					>
-						Search
-					</button>
-				</form>
+				<div className="container">
+					<form className="form-group pt-5" onSubmit={handleSubmit(this.onSubmit)}>
+						<Field name="searchTerm" component={this.renderSearchBar} />
+						<button
+							className="btn btn-primary"
+							id="submit-button"
+							style={{ marginLeft: '45%', marginTop: '10px' }}
+						>
+							Search
+						</button>
+					</form>
 
-				<div className="video-list">{this.renderVideos()}</div>
+					<div className="video-list">{this.renderVideos()}</div>
+				</div>
 			</React.Fragment>
 		);
 	}

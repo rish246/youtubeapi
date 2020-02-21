@@ -28,27 +28,34 @@ class VideoShow extends Component {
 		if (!video) return null;
 
 		return (
-			<div className="video-info" style={{ marginTop: '20px' }}>
+			<div className="video-info">
 				<h6 className="title">{video.snippet.title}</h6>
 			</div>
 		);
 	};
 	render() {
 		return (
-			<div>
+			<React.Fragment>
 				<Header />
-				<div style={this.playerStyles()}>
-					<ReactPlayer
-						url={`https://www.youtube.com/watch?v=${this.props.match.params.id}`}
-						playing
-						controls
-						width="100%"
-						height="500px"
-					/>
+
+				<div className="container">
+					<div className="row justify-content-center">
+						<div className="col-sm-12 col-lg-10">
+							<div style={this.playerStyles()}>
+								<ReactPlayer
+									url={`https://www.youtube.com/watch?v=${this.props.match.params.id}`}
+									playing
+									controls
+									width="100%"
+									height="500px"
+								/>
+							</div>
+							{/* <h4 className="title">{this.props.video.snippet.title}</h4> */}
+							{this.renderVideoInfo()}
+						</div>
+					</div>
 				</div>
-				{/* <h4 className="title">{this.props.video.snippet.title}</h4> */}
-				{this.renderVideoInfo()}
-			</div>
+			</React.Fragment>
 		);
 	}
 }

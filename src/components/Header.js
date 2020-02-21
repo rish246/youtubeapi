@@ -10,21 +10,23 @@ const Header = (props) => {
 
 	// i am using it outside a router
 	return (
-		<nav className="navbar navbar-light" id="main-navbar">
+		<nav className="navbar navbar-dark bg-dark" id="main-navbar">
 			<Link to="/" className="navbar-brand">
 				Youtube
 			</Link>
 
 			<ul className="navbar-nav mr-auto">
 				<li className="nav-item">
-					<Link to="/" className="nav-link">
-						Videos
+					<Link to="/videos/list" className="nav-link">
+						Search
 					</Link>
 				</li>
 			</ul>
-			<GoogleOAuth button="btn-sm" />
+			<GoogleOAuth />
 		</nav>
 	);
 };
 
 export default Header;
+
+// give the navbar a background color of youtube-red

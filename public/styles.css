@@ -2,8 +2,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	--primary: #f21839;
-	--secondary: #f27e90;
+	--youtube-red: #ff0000;
+	--secondary: #f0516c;
 	--bgcolor: #fae6e9;
 }
 
@@ -18,34 +18,42 @@ body {
 	width: 100vw;
 	height: 100vh;
 	align-items: center;
-	justify-content: center;
+	justify-content: start;
 
-	background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: linear-gradient(var(--youtube-red), var(--secondary));
+
 	font-family: 'Monsterrat', sans-serif;
 }
 
 .landing-page-heading {
+	text-align: center;
+	width: 100%;
+	height: 500px;
 	display: inline-block;
 	font-size: 100px;
-	color: #c4ddf6;
-	margin-bottom: 10px;
+	color: white;
+	padding-top: 180px;
 }
 
-.auth-button {
-	margin: 50px;
-}
-
-div.form-group #submit-button {
-	margin-left: 50%;
-}
-
-.btn {
+.landing-page-buttons {
 	display: flex;
-	margin-left: 50%;
-	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	margin-right: 20px;
 }
 
 /* // css to style the videoList and the thumbnails */
+.landing-page-buttons .btn {
+	margin: 0;
+	padding: 0;
+}
+
+/* .landing-page-buttons .btn {
+	margin: 0;
+	padding: 0;
+} */
+
+.landing-page-buttons .btn {
+	margin-right: 10px;
+	padding: 5px 10px 5px 10px;
+}

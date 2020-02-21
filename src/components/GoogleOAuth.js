@@ -50,18 +50,23 @@ class GoogleAuth extends Component {
 			case true:
 				return (
 					<button
-						className={`btn btn-danger auth-buttons ${this.props.button}`}
+						className={`btn btn-outline-light auth-buttons ${this.props.button}`}
 						onClick={this.onSignOutClick}
 					>
-						<h4>Sign Out</h4>
+						Sign Out
 					</button>
 				);
 			case undefined:
 				return null;
 			default:
 				return (
-					<button type="button" class="btn btn-danger btn-lg auth-buttons" onClick={this.onSignInClick}>
-						<h4>Sign In</h4>
+					<button
+						type="button"
+						class="btn btn-outline-light auth-buttons"
+						onClick={this.onSignInClick}
+						style={{ padding: '5px 10px 5px 10px', height: '40px' }}
+					>
+						<p>Sign In</p>
 					</button>
 				);
 		}

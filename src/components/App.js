@@ -9,7 +9,7 @@ import history from '../history';
 
 const App = () => {
 	return (
-		<div className="container">
+		<div>
 			<Router history={history}>
 				<div>
 					<Route path="/" exact component={LandingPage} />
